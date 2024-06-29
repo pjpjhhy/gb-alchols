@@ -1,0 +1,85 @@
+<%- include('common/header.ejs') %>
+  <div id="Main_div">
+    <!-- 메인 컨테이너 -->
+    <div id="container">
+  <header>
+    <a href="#" onclick="history.back()">
+      <img class="guide" src="../file/icon/back.png" alt="">
+      </a>
+      <img src="../file/logo.svg" alt="">
+      <img class="guide" id="guide" src="../file/icon/guide.png" alt="">
+  </header>
+  <!-- 컨텐츠 --> 
+  <div class="wrap">
+    <!-- ooo님 환영합니다 상단 -->
+    <div id="myPage_welcome">
+        <div id="myPage_welcome_div">
+          <div id="myPage_welcome_div_left">
+            <!-- 사용자 정보 표시 -->
+            <div id="WelcomeUser"></div>
+            <div>환영합니다</div>
+            <button id="logOut" class="logOut">로그아웃</button>
+          </div>
+        <!-- 오른쪽 프로필 이미지 -->
+        <form class="profile-container">
+          <div class="profile">
+              <img class="profile_img" id="profile_img" src="../file/icon/profile.png">
+          </div>
+          <input type="file" id="image_upload" accept="image/*" />
+        </form>      
+      </div>
+    </div>
+    <!-- 나의 정보 -->
+    <section class="myPage">
+      <h2>나의 정보</h2>
+      <div id="myPage_info">
+        <!-- 내 계정관리 및 정보 수정 -->
+        <div id="myPage_info_info">
+          <!-- 왼쪽 프로필 이미지 및 계정관리 -->
+          <form>
+            <div class="info_section1">
+              <img class="icon" src="../file/icon/profile2.png" alt="">
+              <div class="myPage_info_info_user_profile">내 계정관리</div>
+            </div>
+            <div id="myPage_info_info_user">
+              <div class="input-group">
+                <label for="username">아이디</label>
+                <div id="userId"></div>
+              </div>
+              <div class="input-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="input-group">
+                <label for="phone">전화번호</label>
+                <input type="text" id="phone" name="phone" required>
+              </div>
+              <div class="input-group">
+                <label for="userPassword">비밀번호</label>
+                <input type="password" id="userPassword" name="password" required>
+                <span class="error-message" id="passwordError"></span>
+                <span class="eyes1" id="eyes"><img src="../file/icon/eyes.png" alt=""></span>
+            </div>
+            <div class="input-group">
+              <label for="confirm-password">비밀번호 <br/>확인</label>
+              <input type="password" id="confirm-password" name="confirm-password" required>
+              <span class="error-message" id="confirmPasswordError"></span>
+              <span class="eyesd1" id="eyes"><img src="../file/icon/eyes.png" alt=""></span>
+          </div>
+            <button id="info_change" class="info_change">내 정보 변경</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="/js/myPage.js"></script>
+  
+  <%- include('common/footer.ejs') %>
+  <script>
+   
+  </script>
+  </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<%- include('common/header.ejs') %>
+  <!-- 회원가입 폼 -->
+  <div id="Main_div">
+    <!-- 메인 컨테이너 -->
+    <div id="container">
+      <header>
+        <a href="#" onclick="history.back()">
+          <img class="guide" src="../file/icon/back.png" alt="">
+          </a>
+          <img src="../file/logo.svg" alt="">
+          <img class="guide" id="guide" src="../file/icon/guide.png" alt="">
+      </header>
+      <div id="signup-form">
+        <h2 id="h2">회원가입</h2>
+        <form id="join-Form" method="post"> <!-- 회원가입 폼의 action과 method 설정 -->
+            <div class="input-group">
+                <label for="name">이름</label>
+                <input type="text" id="userName" name="name" required>
+                <span class="error-message" id="userNameError"></span>
+            </div>
+            <div class="input-group">
+                <label for="username">아이디</label>
+                <input type="text" id="userId" name="username" required>
+                <span class="error-message" id="userIdError"></span>
+            </div>
+            <div class="input-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="input-group">
+                <label for="phone">전화번호</label>
+                <input type="text" id="phone" name="phone" required>
+                <span class="error-message" id="phoneError"></span>
+            </div>
+            <div class="input-group">
+                <label for="userPassword">비밀번호</label>
+                <input type="password" id="userPassword" name="password" required>
+                <span class="error-message" id="passwordError"></span>
+                <span class="eyes" id="eyes"><img src="../file/icon/eyes.png" alt=""></span>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">비밀번호 <br/>확인</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <span class="error-message" id="confirmPasswordError"></span>
+                <span class="eyesd" id="eyes"><img src="../file/icon/eyes.png" alt=""></span>
+            </div>
+            <div class="input-group">
+                <div>
+                    <input type="checkbox" id="age-check" name="age-check" required>
+                    <label id="sign_label" for="age-check">만 19세 이상입니다</label>
+                </div>
+            </div>
+            <button type="button" id="joinBtn">회원가입</button> <!-- type을 submit에서 button으로 변경 -->
+        </form>
+    </div>
+
+    </div>
+  </div>  
+      </div>
+    </div>
+    <script src="../js/sign.js"></script>
+</body>
+</html>

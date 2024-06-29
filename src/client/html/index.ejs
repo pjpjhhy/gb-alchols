@@ -1,0 +1,114 @@
+
+  <%- include('common/header.ejs') %>
+  <div id="Main_div">
+    <!-- 메인 컨테이너 -->
+    <div id="container">
+      <!-- 헤더 나브 -->
+      <header>
+        <img class="back" src="../file/icon/back.png" alt="">
+        <img src="../file/logo.svg" alt="">
+        <img class="guide" id="guide" src="../file/icon/guide.png" alt="">
+      </header>
+      <!-- 배너부분 -->
+      <section id="carosel">
+        <!-- Slider main container -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../file/bnr.png"></div>
+            <div class="swiper-slide"><img src="../file/bnr1.jpg"></div>
+            <div class="swiper-slide"><img src="../file/bnr2.jpg"></div>
+            <div class="swiper-slide"><img src="../file/bnr3.jpg"></div>
+<!-- 
+            <div class="swiper-slide"><img src="../file/header_bg2.jpg"></div>
+            <div class="swiper-slide"><img src="../file/mainimg2.svg"></div>
+            <div class="swiper-slide"><img src="../file/mainimg.jpg"></div> -->
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- 메인 컨텐츠 -->
+      <section id="main_contant">
+        <!-- 메인 타이틀 -->
+        <h2>경상도 바람따라 구름따라<img src="/file/구름.svg" alt="cloud_icon"/></h2>
+        <!-- 선택할수 있는 지도가 들어가는 공간 -->
+        <div id="mapSection">
+          <!-- <div id="north_div">
+            <img class="north" src="../file/KN.png" alt="">
+            <div id="north_before"></div>
+          </div>
+          <div id="south_div">
+            <img class="south" src="../file/KS.png" alt="">
+            <div id="south_before"></div>
+          </div> -->
+          <div id="north">
+            <img src="/file/경북.svg" alt="경상도_지도"/>
+          </div>
+          <div id="south">
+            <img src="/file/경남.svg" alt="경상도_지도"/>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      loop: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+  </script>
+<script>
+let scaleValue = 1; // 초기 크기
+
+// north_before div 클릭 이벤트
+// const north = document.getElementById("north_div");
+const north = document.querySelector("#north > img");
+north.addEventListener("click", function() {
+    // scaleValue += 0.2; // 0.1씩 증가
+    // north.style.zIndex = "12"
+    // console.log("경북")
+    // // north_div 확대
+    // document.getElementById("north_div").style.transform = `scale(${scaleValue})`;
+
+    // // 0.5초 후에 다른 페이지로 이동
+    // setTimeout(function() {
+        window.location.href = "./map?point=north" // 다른 페이지로 이동
+    // }, 500); // 0.5초 후에 이동하도록 설정 (500ms = 0.5초)
+});
+
+// south_before div 클릭 이벤트
+// const south = document.getElementById("south_div");
+const south = document.querySelector("#south > img");
+south.addEventListener("click", function() {
+    // scaleValue += 0.2; // 0.1씩 증가
+    // south.style.zIndex = "12"
+    // console.log("경남")
+    // // south_div 확대
+    // document.getElementById("south_div").style.transform = `scale(${scaleValue})`;
+
+    // // 0.5초 후에 다른 페이지로 이동
+    // setTimeout(function() {
+        window.location.href = "./map?point=south"; // 다른 페이지로 이동
+    // }, 500); // 0.5초 후에 이동하도록 설정 (500ms = 0.5초)
+});
+</script>
+  <%- include('common/footer.ejs') %>
+</body>
+</html>

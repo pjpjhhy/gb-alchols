@@ -1,0 +1,41 @@
+<%- include('common/header.ejs') %>
+<div id="Main_div">
+  <!-- 메인 컨테이너 -->
+  <div id="container">
+    <header>
+      <a href="#" onclick="history.back()">
+        <img class="guide" src="../file/icon/back.png" alt="">
+        </a>
+        <img src="../file/logo.svg" alt="">
+        <img class="guide" id="guide" src="../file/icon/guide.png" alt="">
+    </header>
+    <!-- 메인 지도 -->
+    <div class="container empty-background">
+      <nav class="nav">
+        <!-- <p class="title">하하호호여행</p>
+        <div class="sub-title">코스 리스트</div> -->
+      </nav>
+
+      <div class="content-container">
+        <!-- 코스 리스트 아이콘 -->
+        <ul id="courseWrap" class="course-nav-ul"></ul>
+        <!-- 카카오 지도 -->
+        <div id="location-map">
+          <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 코스 클릭 시 코스 프로그램 -->
+    <div>
+    <div class="course-program-container">
+      <!-- close -->
+        <img class="program-close-btn" src="../file/icon/close.png" alt="">
+    </div>
+    </div>
+    <%- include('common/footer.ejs') %>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8b8c9b93bd0342f7afe232eb1e35f74f"></script>
+    <script type="text/javascript" src="/js/course.js">
+    </script>
+  </div>
+</body>
+</html>

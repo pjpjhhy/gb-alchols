@@ -1,0 +1,49 @@
+<%- include('common/header.ejs') %>
+  <div id="Main_div">
+    <!-- 메인 컨테이너 -->
+    <div id="container">
+      <header>
+        <a href="#" onclick="history.back()">
+          <img class="guide" src="../file/icon/back.png" alt="">
+          </a>
+          <img src="../file/logo.svg" alt="">
+          <img class="guide" id="guide" src="../file/icon/guide.png" alt="">
+      </header>
+      <!-- 로그인 폼 -->
+      <div id="login-form">
+        <h2 id="h2">로그인</h2>
+        <!-- 로그인 폼의 action과 method 설정 -->
+          <div class="input-group">
+            <label for="userId">아이디</label>
+            <input type="text" id="userId" name="userId" required>
+          </div>
+          <div class="input-group">
+            <label for="userPassword">비밀번호</label>
+            <input type="password" id="userPassword" name="userPassword" required>
+            <span class="eyesa" id="eyes"><img src="../file/icon/eyes.png" alt=""></span>
+          </div>
+          <button class="join">회원가입</button>
+          <button id="login" >로그인</button>
+     
+        <!-- 소셜 로그인 버튼 -->
+        <div id="social-login">
+          <a href="/naver">
+            <button class="social-button" id="naver-login">
+              <img src="../file/icon/btnG_아이콘사각.png" alt=""> 
+              <div>네이버 로그인</div>
+            </button>
+          </a>
+          <a href="/social/kakao">
+            <button class="social-button" id="kakao-login">
+              <img src="../file/icon/kakao.png" alt="">
+              <div>카카오 로그인</div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>

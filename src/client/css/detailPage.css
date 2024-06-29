@@ -1,0 +1,224 @@
+
+#detailPage_img{
+  width: 100%;
+  height: 250px;
+  margin-top: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+#Yaungjojang_name{
+  display: flex;
+  align-items: center;
+}
+#detailPage_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+#detail_span{
+  font-size: 30px;
+  color: #981A4A;
+  margin-left: 10px;
+}
+#Yaungjojang_joso{
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+#yaungjojang_info_div_div{
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin-left: 10px;
+}
+#detailPage_jjim{
+  display: flex;
+  background: #d9d9d9;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 10px;
+}
+.detailPage_info{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 40px 50px 10px;
+}
+.detail_soja{
+  color: #981A4A;
+}
+#detailPage_Cheheom{
+  margin-top: 20px;
+  overflow:scroll; 
+}
+
+#detailPage_Cheheom::-webkit-scrollbar {
+  width: 0; /* 가로 스크롤바 너비를 0으로 설정 */
+}
+
+#detailPage_Cheheom::-webkit-scrollbar-thumb {
+  background-color: transparent; /* 스크롤바 색상을 투명하게 설정 */
+}
+#detailPage_Cheheom_div{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+
+}
+#detailPage_Cheheom h2{
+  display: flex;
+  align-items: center;
+}
+
+.title-line{
+  border-bottom: 2px solid black;
+  width: 64%;
+  margin-left: 5px;
+  padding-top: 10px;
+}
+
+#detailPage_Cheheom_div div:nth-child(1){
+  width: 50%;
+  height: 150px;
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#detailPage_Cheheom_div div:nth-child(2){
+  height: 150px;
+  width: 50%;
+}
+#detailPage_button{
+  width: 140px;
+  height: 30px;
+  background: #d9d9d9;
+  border-radius: 10px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#detailPage_suljeongbo_main_div{
+  padding: 15px;
+  height: 350px;
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 150px;
+  overflow-y: hidden;
+}
+#detailPage_suljeongbo_main_div::-webkit-scrollbar {
+  display: none; /* 스크롤 바 숨김 */
+}
+.detailPage_gap{
+  margin-top: 5px;
+}
+.detailPage_suljeongbo{
+  display: flex;
+  width: 70%;
+  height: 100%;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(255,255,255,0.6);
+  margin-right: 10px;
+  border-radius: 10px;
+}
+#detailPage_suljeongbo_img{
+  height: 100%;
+  width: 1000px;
+}
+#detailPage_suljeongbo_text{
+  width: 50%;
+}
+#sul{
+  margin-top: 60px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* 캐러셀 */
+
+swiper-container {
+  width: 100%;
+  height: 300px;
+}
+#detailPage_Cheheom h2{
+  margin-top: 30px;
+  margin-left: 10px;
+}
+/* .line {
+  border-bottom: 1px solid black;
+  width: 66%;
+  float: right;
+} */
+.mySwiperz{
+  width: auto;
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  padding: 10px;
+}
+
+.mySwiperz #chehum_div{
+  width: 370px;
+  height: auto;
+  padding: 10px;
+  margin: 5px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 10px;
+}
+.mySwiperz .program-info{
+  width: 300px;
+  height: auto;
+  padding: 5px;
+  margin: 5px;
+  font-size: 14px;
+}
+.program-info h3{
+  font-size: 18px;
+}
+.mySwiperz img{
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+.mySwiperz::-webkit-scrollbar {
+  width: 0; /* 가로 스크롤바 너비를 0으로 설정 */
+}
+.detailPage_suljeongbo {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* 이미지 */
+#detailPage_suljeongbo_img img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* 텍스트 */
+#detailPage_suljeongbo_text {
+  padding-left: 20px;
+}
+
+#detailPage_suljeongbo_text h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#detailPage_suljeongbo_text p {
+  margin: 5px 0;
+}
+
+#detailPage_suljeongbo_text p b {
+  font-weight: bold;
+}

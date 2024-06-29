@@ -1,0 +1,241 @@
+.wrap {
+  max-width: 406px;
+  /* height: 100vh; */
+  margin: 0 auto;
+}
+#myPage_welcome {
+  width: 100%;
+  padding: 20px 12px;
+}
+#myPage_welcome_div {
+  width: 100%;
+  height: 165px;
+  background: rgba(255,255,255,0.4);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#WelcomeUser {
+  margin-top: 15px;
+}
+.logOut {
+  width: 125px;
+  height: 40px;
+  background-color: #981A4A;
+  color: white;
+  margin: 7px 0;
+}
+.info_change {
+  width: 125px;
+  height: 40px;
+  background-color: #981A4A;
+  color: white;
+  margin: 10px 0 25px;
+}
+#myPage_welcome_div_left {
+  font-weight: bold;
+  font-size: 25px;
+}
+.profile {
+  width: 128px;
+  height: 128px; 
+  background: white;
+  outline: 5px solid #FFFCE6;
+  border-radius: 50%;
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_img {
+  object-fit: cover;
+  width: 100%; 
+  height: 100%; 
+  border-radius: 50%; 
+}
+
+#image_upload {
+  display: none;
+}
+
+.myPage {
+  margin: 0 12px;
+  background: rgba(255,255,255,0.4);
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+
+.myPage > h2 {
+  margin: 0 0 0 20px;
+  padding-top: 20px;
+  font-size: 30px;
+}
+#myPage_info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+#myPage_info_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 2px solid #981A4A;
+}
+#myPage_info_info_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info_section1{
+  display: flex;
+  margin: 0 0 20px 0;
+}
+.myPage_info_info_user .input-group{
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  padding-right: 30px;
+}
+#userId {
+  flex: 2;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0.5px solid #981A4A;
+  outline: none;
+  transition: border-color 1s ease;
+  font-size: 14px;
+}
+.icon{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+.likes {
+  display: flex
+}
+.arrow1{
+  width: 19px;
+  height: 10px;
+  margin-top: 10px;
+  transform: rotate(180deg);
+}
+.arrow2{
+  width: 19px;
+  height: 10px;
+  margin-top: 10px;
+  position: absolute;
+  right:20px;
+  transform: rotate(180deg);
+}
+.arrow3{
+  width: 19px;
+  height: 10px;
+  margin-top: 10px;
+  transform: rotate(180deg);
+}
+.edit {
+  width: 95px;
+  height: 25px;
+  color: white;
+  font-size: 15px;
+  padding: 3px 0;
+  margin: 10px 0;
+  display: none;
+}
+.ex_edit {
+  width: 95px;
+  height: 25px;
+  color: white;
+  font-size: 15px;
+  padding: 3px 0;
+  margin: 10px 0;
+  display: none;
+}
+.myPage_info_info_user_profile {
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+#myPage_img_article {
+  display: flex;
+  gap: 20px;
+  margin-left: 5%;
+  position: relative;
+}
+#myPage_img_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  margin-bottom: 5px;
+  /* display: none; */
+  width: 45%;
+  left: 50px;
+}
+.brewery_main_photo {
+  width: 100%;
+  object-fit: cover;
+}
+.name {
+  position: absolute;
+  width: 45%;
+  height: 15px;
+  top: 0;
+  left: 10;
+}
+.name_info{
+  background: white;
+  color:#981A4A;
+  /* border: 2px solid #981A4A; */
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 2px;
+}
+.del_like {
+  background: white;
+  color:#981A4A;
+  border: 2px solid #981A4A;
+  border-radius: 10px;
+  font-size: 8px;
+  font-weight: bold;
+  line-height: 8px;
+  padding: 2px;
+}
+.del_like img {
+  width: 10px;
+  height: 10px;
+}
+#myPage_img_box div {
+  display: flex;
+}
+#img_cul {
+  display: flex;
+  justify-content: space-between;
+}
+.eyes1{
+  position: absolute;
+  right: 25px;
+  top: 24%;
+  cursor: pointer;
+}
+.eyes1 img{
+  width: 29px;
+  height: 24px;
+}
+.eyesd1 img{
+  width: 29px;
+  height: 24px;
+}
+.eyesd1{
+  position: absolute;
+  right: 25px;
+  top: 33%;
+  cursor: pointer;
+}

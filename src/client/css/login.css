@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+#h2 {
+  margin-top: 146px;
+  margin-bottom: 86px;
+}
+
+#login-form {
+  text-align: center;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #981A4A;
+}
+.eyesa{
+  position: absolute;
+  right: 25px;
+  top: 24%;
+  cursor: pointer;
+}
+.eyesa img{
+  width: 29px;
+  height: 24px;
+}
+.input-group input[type="text"],
+.input-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.swal-button{
+  justify-content: center;
+  display: flex;
+}
+#social-login a{
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#social-login {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.social-button {
+  width: 300px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0;
+  color: black;
+}
+#naver-login {
+  background-color: #03c75a;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.social-button img {
+  width: 35px;
+  height: 35px;
+}
+#kakao-login {
+  background-color: #fae100;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 230px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  flex: 1;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+  flex: 2;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

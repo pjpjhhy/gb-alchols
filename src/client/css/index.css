@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+a{
+  color: black ;
+}
+#Main_div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url(../file/background.png);
+  background-repeat: repeat;
+}
+#container{
+  width: 100%;
+  height: 100%;
+}
+.back {
+  visibility: hidden;
+  margin-top: 20px;
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+}
+#main_contant{
+  width: 100%;
+  height: 100%;
+}
+#main_contant h2 {
+  margin-top:30px;
+  font-weight: bold;
+  font-size: 20px;
+  color:black;
+}
+#mapSection{
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+#north > img {
+  width: 200px;
+}
+#south {
+  position: relative;
+  width: 100%;
+}
+#south > img {
+  width: 220px;
+  position: absolute;
+  left: 50%; top: -62.5px;
+  transform: translateX(-63%);
+}
+
+#north_div{
+  position: relative;
+}
+#north_before{
+  display: block;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 10px;
+  right: 15%;
+
+}
+
+/* 확대 효과를 위한 CSS */
+#north_div, #south_div {
+  transition: transform 0.5s ease;
+  transform-origin: center center; 
+}
+
+/* 클릭할 수 있는 div 스타일 */
+.clickable {
+  cursor: pointer;
+}
+.north {
+  position: relative;
+  margin-left: 30%;
+}
+
+#south_before{
+  display: block;
+  width: 188px;
+  height: 100px;
+  position: absolute;
+  bottom: 180px;
+  left: 100px;
+}
+.south {
+  position: relative;
+  left: 18.2%;
+  bottom:78.5px
+}
+@media screen and (min-width: 490px) {
+  #north_before { right: 25%; }
+}
+
+@media screen and (min-width: 586px) {
+  #north_before { right: 35%; }
+}
+
+@media screen and (min-width: 760px) {
+  #north_before { right: 45%; }
+}
+
+@media screen and (min-width: 900px) {
+  #north_before { right: 50%; }
+}
+
+@media screen and (min-width: 1250px) {
+  #north_before { right: 55%; }
+}

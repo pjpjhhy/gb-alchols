@@ -1,0 +1,19 @@
+/* qr */
+.qr-container {
+  width: 100%;
+  padding-top: 30px;
+}
+.wait-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.wait-text.hidden {
+  display: none;
+}
+.canvas-wrap {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

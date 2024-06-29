@@ -1,0 +1,23 @@
+#main_contant{
+  /* margin-top: 20px; */
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+#donggle{
+  display: flex;
+  width: 100%;
+  height: auto;
+  gap: 5px;
+  font-size: 14px;
+  margin-top: 20px;
+  
+}
+.area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  border-radius: 20px;
+  padding: 10px;
+}

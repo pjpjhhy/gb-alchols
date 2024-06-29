@@ -1,0 +1,73 @@
+      <!-- 푸터 -->
+      <footer>
+        <!-- 고정 하단 바  -->
+        <div id="footer_div">
+          <!-- 왼쪽 아이콘 -->
+          <div class="footer_icon"><a href="./"><i class="fa-solid fa-house"></i></a></div>
+          <div class="footer_icon"><a href="./map"><i class="fa-solid fa-map-location-dot"></i></a></div>
+          <!-- 중간 아이콘 -->
+          <div class="mid_icon">
+            <a href="./qrPage">
+              <div><img src="../../file/QR.svg" alt=""></div>
+          </a>
+          </div>
+          <!-- 오른쪽 아이콘 -->
+          <div class="footer_icon"><a href="./stampPage"><i class="fa-solid fa-stamp"></i></a></div>
+          <div id="loginA" class="footer_icon">
+            <a><i class="fa-solid fa-user"></i></a></div>
+        </div>
+      </footer>
+      <script>
+            const loginA = document.getElementById("loginA");
+        loginA.addEventListener("click", () => {
+          const accessToken = localStorage.getItem("accessToken");
+          if (accessToken) {
+            // 토큰이 있으면 myPage로 이동
+            window.location.href = "./myPage";
+          } else {
+            // 토큰이 없으면 로그인 페이지로 이동
+            window.location.href = "./login";
+          }
+        });
+      </script>
+     <script>
+      // 페이지 로드 시 실행되는 함수
+      window.addEventListener("load", async () => {
+        try {
+          // 서버에서 사용자 정보를 요청
+          const response = await fetch("/api/userinfo", {
+            headers: {
+              "Authorization": `Bearer ${localStorage.getItem("accessToken")}`
+            }
+          });
+          
+          // 응답 데이터를 JSON으로 파싱
+          const userData = await response.json();
+        localStorage.setItem("userData", JSON.stringify(userData));
+        // 콘솔에 사용자 정보 출력
+
+        const info = JSON.parse(localStorage.getItem("userData"));
+        const u = document.getElementById("WelcomeUser");
+        u.innerHTML = `${info.user_name}님`;
+
+        const logOut = document.getElementById("logOut");
+        logOut.addEventListener("click", () => {
+          swal("성공!","로그아웃 되었습니다")
+          localStorage.removeItem('accessToken');
+          localStorage.removeItem("userData"); // 사용자 데이터 제거
+          setTimeout(() => {
+          window.location.href = "/";
+          
+        }, 1000)
+        });
+        } catch (error) {
+          console.error("사용자 정보를 가져오는 중 오류 발생:", error);
+        }
+      });
+    </script>
+    <script>
+      const guide = document.getElementById("guide")
+      guide.addEventListener("click",()=>{
+        location.href = "./guide"
+      })
+    </script>

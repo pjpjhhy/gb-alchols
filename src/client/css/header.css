@@ -1,0 +1,42 @@
+header{
+  width: 100%;
+  height: 80px;
+  background: #981A4A;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+header img{
+  width: 100px;
+  height: 80px;
+  
+}
+.guide{
+  margin-top: 20px;
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+}
+
+
+/* course */
+.course-nav-ul { display: flex; flex-wrap: wrap; padding: 20px 0; margin-bottom: 20px; }
+.course-nav-ul .course {font-size: 0.75rem; position: relative; width: 31%; text-align: center; border: 2px solid; border-radius: 30px; margin: 1%; padding: 1vh 0; font-weight: 500; border-color: rgb(221, 221, 221); background-color: rgb(238, 238, 238); font-family: "Pretendard-Medium"; }
+.course-nav-ul .course.on { border-color: #981A4A; background-color: #981A4A; color: #fff; }
+.course-nav-ul .course .mark-wrap { position: absolute;  width: 50px; height: 50px; right: -8px; top: -20px; }
+.course-nav-ul .course .mark-wrap img { width: 100%; height: 100%; }
+#location-map { width: 90%; height: 400px; margin:0 auto; margin-bottom: 200px;}
+ol, ul { list-style: none; }
+/* 코스 클릭 시 코스 프로그램 css */
+.course-program-container { background-color: #fff; max-height: 320px; width: 100%; position: fixed; bottom: -50%; z-index: 20; transition: bottom 1s ease; overflow-y: scroll; padding: 1rem; padding-bottom: 120px; box-shadow: 0px -5px 4px 0px rgba(0, 0, 0, 0.25);}
+.program-close-btn { width: 20px; height: 20px; float: right;}
+.course-image { width: 120px; height: 120px; }
+.course-wrap {display: flex; align-items: center;}
+.course-content-wrap {padding: 1rem;}
+.course-content-wrap > p {padding: 0.1rem 0; font-size: 0.875rem;}
+.course-detail-btn {margin: 0; margin-top: 0.25rem; padding: 0.5rem 1rem; width: 120px; font-size: 0.875rem;}
+/* 스크롤 */
+.course-program-container::-webkit-scrollbar { width: 0.5rem; }
+.course-program-container::-webkit-scrollbar-thumb { background-color: #981A4A; border-radius: 100px; }

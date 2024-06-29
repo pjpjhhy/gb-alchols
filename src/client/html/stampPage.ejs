@@ -1,0 +1,158 @@
+<%- include('common/header.ejs') %>
+  <div id="Main_div">
+    <!-- 메인 컨테이너 -->
+    <div id="container">
+  <header>
+    <a href="#" onclick="history.back()">
+      <img class="guide" src="../file/icon/back.png" alt="">
+      </a>
+      <img src="../file/logo.svg" alt="">
+      <img class="guide" id="guide" src="../file/icon/guide.png" alt="">
+  </header>
+  <!-- 컨텐츠 --> 
+  <div>
+    <!-- ooo님 환영합니다 상단 -->
+    <div id="myPage_welcome">
+        <div id="myPage_welcome_div">
+        <!-- 왼쪽 환영및 로그아웃 -->
+        <div id="myPage_welcome_div_left">
+          <div id="stamp_hun"></div>
+          <div id="stapm_count"></div>
+        </div>
+        <!-- 오른쪽 프로필 이미지 -->
+        <div class="profile">
+          <img class="profile_img" src="../file/icon/profile.png">
+        </div>
+      </div>
+      
+    </div>
+    <!-- 지역선택 -->
+     <!-- <div id="stampPage_region">
+      <div>서울 경기도</div>
+      <div>충청도</div>
+      <div>강원도</div>
+      <div>경상도</div>
+      <div>전라도</div>
+      <div>제주도</div>
+     </div> -->
+  </div>
+  <!-- 3x3 그리드 -->
+  <div class="grid-container">
+    <div>
+      <img src="../file/icon/stamp.png" class="grid-item " alt="고도리 와이너리">
+      <p>고도리 와이너리</p>
+    </div>
+    <div>
+      <img src="../file/icon/stamp.png" class="grid-item " alt="금정산성 토산주">
+      <p>금정산성 토산주</p>
+    </div>
+    <div>
+      <img src="../file/icon/stamp.png" class="grid-item " alt="명가원">
+      <p>명가원</p>
+    </div>
+    <div>
+      <img src="../file/icon/stamp.png" class="grid-item " alt="명인안동소주">
+      <p>명인안동소주</p>
+    </div>
+    <div>
+      <img src="../file/icon/stamp.png" class="grid-item " alt="문경주조">
+      <p>문경주조</p>
+    </div>
+    <div>
+      <img src="../file/icon/stamp.png" class="grid-item " alt="수도산와이너리">
+      <p>수도산와이너리</p>
+    </div>
+    <div>
+      <img src="../file/icon/stamp.png" class="grid-item " alt="오미나라">
+      <p>오미나라</p>
+    </div>
+    <div>
+      <img src="../file/icon/stamp.png" class="grid-item " alt="울진술도가">
+      <p>울진술도가</p>
+    </div>
+  </div>
+  <%- include('common/footer.ejs') %>
+  </div>
+  </div>
+  <script>
+        const accessToken = localStorage.getItem("accessToken");
+        const info = JSON.parse(localStorage.getItem("userData"));
+        const stam = document.getElementById("stamp_hun");
+        if(!info.user_name) {
+          stam.innerHTML = "로그인이<br /> 필요합니다."
+        } else {
+          stam.innerHTML = `${info.user_name}님의 <br /> 스탬프 현황`
+        }
+        // 유저 코스 불러오기
+        async function fetchData() {
+        const response = await fetch("/api/course", {
+          headers: { Authorization: `Bearer ${accessToken}`}
+        });
+        const result = await response.json();
+        const data = result.data;
+
+      
+        
+        // 코스 넘버가 있는 데이터만 뽑기
+        const userCourses = data.filter((item) => {
+          return item.user_courses_no !== null;
+        });
+        // console.log(userCourses);
+
+        // 상품 획득 카운트
+        const count = document.querySelector("#stapm_count");
+        count.textContent = `상품 획득까지 ${userCourses.length}/5`;
+
+        // 스탬프 바꾸기
+        const courseName = document.querySelectorAll(".grid-container > div");
+        userCourses.forEach((item) => {
+          courseName.forEach((image) => {
+            const stampImage = image.querySelector("img");
+            if(stampImage.alt === item.course_name) {
+              stampImage.src = "";
+              stampImage.src = "/file/icon/stampComplete.png";
+            };
+          });
+        });
+        // 스탬프가 5개 이상일 때 상품 획득 알림
+        if (userCourses.length >= 5) {
+          count.textContent = "";
+          count.textContent = "🎁상품 획득 완료!";
+          // const mission=document.querySelector(".mission")
+          const alertShown = localStorage.getItem('alertShown');
+          // mission.style.display="block";
+          if (!alertShown) {
+          Swal.fire({
+          title: "상품 획득!",
+          imageUrl: "/file/cong.png",
+          imageWidth: 100,
+          imageHeight: 100,
+          imageAlt: "Custom image"
+        });
+        localStorage.setItem('alertShown', 'true'); // 알림이 표시되었음을 저장
+      }
+    }
+  }
+      
+      fetchData();
+    // 프로필이 있는 경우
+    const selectImg=document.querySelector(".profile_img");
+    async function fetchProfileImage() {
+      const response = await fetch("/api/fileload", {
+          headers: {
+              Authorization: `Bearer ${accessToken}`
+          }
+      });
+      if (response.ok) {
+          const result = await response.json();
+          if (result.user_image) {
+              selectImg.src = result.user_image;
+          }
+      } else {
+          console.error("이미지 없음");
+      }
+    };
+    window.onload = fetchProfileImage;
+  </script>
+</body>
+</html>

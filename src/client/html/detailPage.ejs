@@ -1,0 +1,45 @@
+<%- include('common/header.ejs') %>
+  <div id="Main_div">
+    <!-- 메인 컨테이너 -->
+    <div id="container" class="detailPage_container">
+      <header>
+        <a href="#" onclick="history.back()">
+          <img class="guide" src="../file/icon/back.png" alt="">
+        </a>
+          <img src="../file/logo.svg" alt="">
+          <img class="guide" id="guide" src="../file/icon/guide.png" alt="">
+      </header>
+      <!-- 위 이미지 -->
+       <div id="detailPage_img"></div>
+       <!-- 아래 양조장 정보 -->
+       <div id="yaungjojang_info_div">
+        <!-- 양조장 이름 및 찜하기 -->
+        <div id="yaungjojang_info_div_div">
+          <!-- 왼쪽 양조장 이름 -->
+          <h2 id="Yaungjojang_name"></h2>
+          <!-- 오른쪽 찜하기 -->
+     
+        </div>
+        <!--예약 방문 및 홈페이지 -->
+        <div class="detailPage_info">
+       </div>
+       <!-- 체험프로그램 정보 -->
+       <div id="detailPage_Cheheom">
+        <h2>체험프로그램<div class="title-line"></div></h2>
+         <div class="mySwiperz">
+ 
+         </div>
+       </div>
+       <!-- 파는 술 정보 -->
+       <h2 id="sul">BEST 전통주<div class="title-line"></div></h2>
+       <div id="detailPage_suljeongbo_main_div">
+      
+       </div>
+       <div></div>
+       <%- include('common/footer.ejs') %>
+    </div>
+    <!-- 이미지 경로 확인 테스트 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="../js/detail.js"></script>
+</body>
+</html>
